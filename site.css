@@ -1,5 +1,15 @@
 body {background-color:lightblue ; font-family : "Courier New" ; color : rgb(255, 255, 255) ;}
-body {li {
-  border: 2px solid blue;
-  padding: .5em;
-  }}
+ul {
+list-style-type: none;
+margin: 0;
+padding: 0;}
+
+  li {display:inline}
+  
+  li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
