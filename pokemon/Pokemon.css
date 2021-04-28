@@ -5,20 +5,20 @@ body {
           padding-top: 3%;
           padding-bottom: 3%;
           font-family: American Typewriter, serif;
-          color:d62828;
+          color:#d62828;
 }
 
 table {
           border-collapse:collapse;
-          border: 3px solid black;
+          border: 3px solid #000000;
           margin-left: auto;
           margin-right: auto;
           border-bottom: solid 5px;
-          color:d62828;
+          color:#d62828;
 }
 
 tr {
-          border: solid black 5px;
+          border: solid #d62828 5px;
           
 }
 
@@ -44,7 +44,7 @@ nav li ul {
           top: 100%;
           padding: 0;
           padding-top: 5px;
-          background-color: black;
+          background-color: #000000;
           position: absolute;
 }
 nav li:hover > ul {
@@ -60,7 +60,7 @@ a {
 
 h1 {
           font-family: Georgia;
-          color: black;
+          color: #000000;
           font-size: 30px;
 }
 h2 {
@@ -68,57 +68,104 @@ h2 {
           color: blue;
           font-size: 18px;
 }
+
+.Total {
+          background-color:#A46798;
+          color:#FFFFFF;
+}
 .Attack {
-          background-color:blue;
+          background-color:#CA1208;
+          color:#FFFFFF;
+}
+.Defense {
+          background-color:#4774C2;
+          color:#FFFFFF;
+}
+.Sp.Atk {
+          background-color:#991414;
+          color:#FFFFFF;
+}
+.Sp.Def {
+          background-color:#1F1497;
+          Color:#FFFFFF;
+}
+.Speed {
+          background-color:#C2D1EB;
+          color:#000000
+}
+.Generation {
+          background-color:#7CE552;
+          color:#000000;
+}
+.Legendary {
+          background-color:#FFFF00;
+          Color:#000000;
 }
 .Bug {
           background-color:#A8B820;
+          color:#000000;
 }
 .Electric {
           background-color:#F8D030;
+          color:#FFFFFF;
 }
 .Fairy {
           background-color:#EE99AC;
+          color:#000000;
 }
 .Fire {
           background-color:#F08030;
+          color:#FFFFFF;
 }
 .Flying {
           background-color:#A890F0;
+          color:#FFFFFF;
 }
 .Ghost {
           background-color:#705898;
+          color:#FFFFFF;
 }
 .Grass {
           background-color:#78C850;
+          color:#FFFFFF;
 }
 .Ground {
           background-color:#E0C068;
+          color:#FFFFFF;
 }
 .Ice {
           background-color:#98D8D8;
+          color:#FFFFFF;
 }
 .Normal {
           background-color:#A8A878;
+          color:#FFFFFF;
 }
 .Poison {
           background-color:#A040A0;
+          color:#FFFFFF;
 }
 .Psychic {
           background-color:#F85888;
+          color:#FFFFFF;
 }
 .Rock {
           background-color:#B8A038;
+          color:#FFFFFF;
 }
 .Dragon {
           background-color:#7038F8;
+          color:#FFFFFF;
 }
 .Steel {
           background-color:#B8B8D0;
+          color:#FFFFFF;
 }
 .Water {
           background-color:#6890F0;
+          color:#FFFFFF;
 }
 .Fighting {
           background-color:#C03028;
+          color:#FFFFFF;
 }
