@@ -39,6 +39,7 @@ nav li {
           font-size: 18px;
           padding-right: 8px;
           text-align: center;
+          float: center;
           
 }
 nav li ul {
@@ -49,11 +50,13 @@ nav li ul {
           padding-top: 5px;
           background-color: #000000;
           position: absolute;
+          
 }
 nav li:hover > ul {
           display: block;
 }
-
+          
+          
 
 a {
           padding-left: 3px;
@@ -62,6 +65,9 @@ a {
           
 }
 
+a:visited {
+          color:#d62828;
+}
 h1 {
           font-family: Georgia;
           color: #FFFFFF;
