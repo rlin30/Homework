@@ -6,6 +6,7 @@ body {
           padding-bottom: 3%;
           font-family: American Typewriter, serif;
           color:#d62828;
+          background-color:#000000;
 }
 
 table {
@@ -60,23 +61,23 @@ a {
 
 h1 {
           font-family: Georgia;
-          color: #000000;
+          color: #FFFFFF;
           font-size: 30px;
 }
 h2 {
           font-family: Brush Script MT;
-          color: blue;
+          color:#2265EC;
           font-size: 18px;
 }
-.Type 1 {
+.Type1 {
           background-color:#BF1DA4;
           color:#FFFFFF;
 }
-.Type 2 {
+.Type2 {
           background-color:#1D35BF;
           color:#FFFFFF;
 }
-.# {
+.Number {
           background-color:#1D53BF;
           color:#FFFFFF;
 }
@@ -107,11 +108,11 @@ h2 {
           background-color:#4774C2;
           color:#FFFFFF;
 }
-.Sp.Atk {
+.SpAtk {
           background-color:#991414;
           color:#FFFFFF;
 }
-.Sp.Def {
+.SpDef {
           background-color:#1F1497;
           Color:#FFFFFF;
 }
