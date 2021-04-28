@@ -9,7 +9,7 @@ body {
 }
 
 table {
-          
+          border-collapse:collapse;
           border: 3px solid black;
           margin-left: auto;
           margin-right: auto;
@@ -26,7 +26,7 @@ td {
           border-right: solid 1px;
           padding: 5px;
           text-align: center;
-          color: black;
+          
 }
 nav {
           padding-bottom: 10px;
@@ -69,7 +69,7 @@ h2 {
           font-size: 18px;
 }
 .Attack {
-          background-color:red;
+          background-color:blue;
 }
 .Bug {
           background-color:#A8B820;
