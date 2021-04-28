@@ -44,7 +44,7 @@ nav li ul {
           top: 100%;
           padding: 0;
           padding-top: 5px;
-          background-color: white;
+          background-color: black;
           position: absolute;
 }
 nav li:hover > ul {
@@ -55,15 +55,12 @@ a {
           padding-left: 3px;
           padding-right: 3px;
           text-align: center;
-          color: red;
+          
 }
 
-a:visited {
-          color: red;
-}
 h1 {
           font-family: Georgia;
-          color: lightblue;
+          color: black;
           font-size: 30px;
 }
 h2 {
