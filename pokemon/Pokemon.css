@@ -29,21 +29,29 @@ td {
           text-align: center;
           
 }
-nav li {
-   display: inline-block;
-   position: relative;
+nav {
+          padding-bottom: 10px;
+}
+nav li { 
+          position: relative;
+          display: inline-block;
+          padding-left: 8px;
+          font-size: 18px;
+          padding-right: 8px;
+          text-align: center;
+          float: center;
 }
 nav li ul {
-   display: none;
-   position: absolute;
-   width: 100px;
-   top: 100%;
-   padding: 0;
+          display:none;
+          width: 100px;
+          top: 100%;
+          padding: 0;
+          padding-top: 5px;
+          background-color: #000000;
+          position: absolute;
 }
 nav li:hover > ul {
    display: block;
-}
-nav a {
 }
           
 
