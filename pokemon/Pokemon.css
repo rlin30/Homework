@@ -9,7 +9,7 @@ body {
 }
 
 table {
-          table-collapse:collapse;
+          border-collapse:collapse;
           border: 3px solid black;
           margin-left: auto;
           margin-right: auto;
