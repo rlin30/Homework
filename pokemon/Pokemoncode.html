@@ -1,0 +1,274 @@
+def CreateNavBar():
+    types=['Grass', 'Poison', 'Fire', 'Flying', 'Water', 'Bug', 'Normal', 'Electric', 'Ground', 'Fairy', 'Fighting', 'Psychic', 'Rock', 'Steel', 'Ice', 'Ghost', 'Dragon']
+    WholeNav= ''
+    Nav = ''
+    z = ''
+    for m in types:
+        z += '<li><a href="'+ m +'.html" class="'+ m +'">' + m + '</a></li>'
+    Types = '<li><a>Types</a><ul>' + z + '</ul></li>'
+    Navbar = ['Home','All Pokemon', 'My Top 10']
+    for i in Navbar:
+        Nav += '<ul><li><a href="'+ i +'.html" class="'+ i +'">'+ i + '</a></li></ul>'
+    WholeNav += '<nav>' + Nav + '<ul>' + Types + '</ul>''</nav>'
+    return WholeNav
+
+def makePokemonRow(Pokemon):
+    
+    with open('pokemon.csv','r') as text:
+        something = ''
+        something += text.read()
+        d = something.split('\n')
+        c = ''
+        g = ''
+        e = []
+        num = -1
+        part = ''
+        r=''
+        
+        
+        for x in d:
+            f = x.split(',')
+            p = ''
+            
+            num += 1
+            for l in f:
+                
+                if Pokemon == l:
+                    c += str(num) + ','
+        c = c.strip(',')
+        c = c.split(',')
+        for k in c:
+            e += d[int(k):int(k)+1]
+        for h in e:
+            count = 0
+            h = h.split(',')
+            part = ''
+            for v in h:
+                count += 1
+                if count > 2:    
+                    if count == 3:
+                        g = v
+                    if count == 4:
+                        if v == "":
+                            part += '<td class="' + g +'" colspan="2">' + g + '</td>'
+                        else:
+                            part += '<td class="' + g +'">' + g + '</td>''<td class="' + v +'">' + v + '</td>'
+                    if count == 5:
+                        part += '<td class="Total">' + v + '</td>'  
+                    if count == 6:
+                        part += '<td class="HP">' + v + '</td>'
+                    if count == 7:
+                        part += '<td class="Attack">' + v + '</td>'
+                    if count == 8:
+                        part += '<td class="Defense">' + v + '</td>'
+                    if count == 9:
+                        part += '<td class="SpAtk">' + v + '</td>'
+                    if count == 10:
+                        part += '<td class="SpDef">' + v + '</td>'
+                    if count == 11:
+                        part += '<td class="Speed">' + v + '</td>'
+                    if count == 12:
+                        part += '<td class="Generation">' + v + '</td>'
+                    if count == 13:
+                        part += '<td class="Legendary">' + v + '</td>'
+                else:
+                    part += '<td>' + v + '</td>'
+                if count == 13:
+                    t = str(h[0:1])
+                    t = t.strip("['']")
+                    r += '<tr>' + '<td>'+'<img src= "pokemonimages/front/'+ t +'.png"'+ '</td>' + part + '</tr>'
+    return r
+def makeHomePage(a,b,c,d,e,f):
+    r = makePokemonRow(a)+makePokemonRow(b)+makePokemonRow(c)+makePokemonRow(d)+makePokemonRow(e)+makePokemonRow(f)
+    layout='''<DOCTYPE HTML>
+<html>
+  <head>
+    <title>
+      Home
+    </title>
+    <link rel="stylesheet" href="Pokemon.css">
+  </head>
+  <body> ''' + CreateNavBar() + '''
+  
+  <h1> Home </h1>
+  <h2> Richard Lin </h2>
+  <p>
+    My experience with Pokemon is a good one. I have always liked video games. I found them very entertaining and pokemon is no different. I watched part of the anime growing up, and I had pokemon cards as well. However, I didn't really get how to play. I had played the game before and I find it to be fun. The only pokemon I really know are the early generations like generation 1. I would usually have Gengar, Charizard, Garyardos, Dragonite, and Arcanine along with anonther fighting pokemon like Hitmonchan because they were usually good and I considered them to be cool. For example, I think Gengar can use hypnosis and dream eater, which are both good moves, and that can heal and do a lot of damage. I liked to use dragon type pokemon like Charizard because dragon attacks are usually good. My favorite pokemon in this generation would be Arcanine because it just looks cool. It looks like a big, fluffy and cool wolf. I don't play the games much these days, but I would like to get back into it because it was fun. </p> 
+    <table><tr><td class="Image">Image</td><td class="Number">#</td><td class="Name">Name</td><td class="Type1">Type 1</td><td class="Type2">Type 2</td><td class="Total">Total</td><td class="HP">HP</td><td class="Attack">Attack</td><td class="Defense">Defense</td><td class="SpAtk">Sp. Atk</td><td class="SpDef">Sp. Def</td><td class="Speed">Speed</td><td class="Generation">Generation</td><td class="Legendary">Legendary</td></tr> ''' + r + '''</table>
+  
+  </body>
+  
+  </html>'''
+    return layout
+
+def makeMyTop10Page(a,b,c,d,e,f,g,h,i,j):
+    r = makePokemonRow(a)+makePokemonRow(b)+makePokemonRow(c)+makePokemonRow(d)+makePokemonRow(e)+makePokemonRow(f)+makePokemonRow(g)+makePokemonRow(h)+makePokemonRow(i)+makePokemonRow(j)
+    layout='''<DOCTYPE HTML>
+<html>
+  <head>
+    <title>
+      My Top 10 Pokemon
+    </title>
+    <link rel="stylesheet" href="Pokemon.css">
+  </head>
+  <body> ''' + CreateNavBar() + '''
+  
+  <h1> My Top 10 Pokemon </h1>
+  <h2> Richard Lin </h2>
+  <p>
+My top 10 pokemon recommendations to use base on stats and a bit of bias would be Gengar, Dragonite, Gyarados, Charizard, Arcanine, Aerodactyl, Machamp, Golem, Snorlax, and Hitmonlee. I chose these pokemons because they all have good damage, speed, or both. What I value as when I play pokemon is the ability to just destroy things. I don't care too much for status effect because they just seem tedious to me. Besides that point, these are really good pokemon based on their stats and overall stats. Some of these pokemon are tanky and can do a truck load of damage, and some of these pokemon don't have as much health but they have speed to make up for it. I could go further into this and explain the certain moves these pokemon have that make them destructive monsters, but one can easily tell by their stats that it is no question that these pokemon are one of the top tier pokemon. </p> 
+    <table><tr><td class="Image">Image</td><td class="Number">#</td><td class="Name">Name</td><td class="Type1">Type 1</td><td class="Type2">Type 2</td><td class="Total">Total</td><td class="HP">HP</td><td class="Attack">Attack</td><td class="Defense">Defense</td><td class="SpAtk">Sp. Atk</td><td class="SpDef">Sp. Def</td><td class="Speed">Speed</td><td class="Generation">Generation</td><td class="Legendary">Legendary</td></tr> ''' + r + '''</table>
+  
+  </body>
+  
+  </html>'''
+    return layout
+
+def AllTable():
+    with open('pokemon.csv','r') as text:
+        something = ''
+        something += text.read()
+        e = something.split('\n')
+        e = e[1:]
+        o = ''
+        g = -1
+        p = ''
+        f = ''
+        for x in e:
+            u = 0
+            x = x.split(',')
+            c = ''
+            for b in x:
+                u += 1
+                if u > 2:    
+                    if u == 3:
+                        f = b
+                    if u == 4:
+                        if b == "":
+                            c += '<td class="' + f +'" colspan="2">' + f + '</td>'
+                        else:
+                            c += '<td class="' + f +'">' + f + '</td>''<td class="' + b +'">' + b + '</td>'
+                    if u == 5:
+                        c += '<td class="Total">' + b + '</td>'  
+                    if u == 6:
+                        c += '<td class="HP">' + b + '</td>'
+                    if u == 7:
+                        c += '<td class="Attack">' + b + '</td>'
+                    if u == 8:
+                        c += '<td class="Defense">' + b + '</td>'
+                    if u == 9:
+                        c += '<td class="SpAtk">' + b + '</td>'
+                    if u == 10:
+                        c += '<td class="SpDef">' + b + '</td>'
+                    if u == 11:
+                        c += '<td class="Speed">' + b + '</td>'
+                    if u == 12:
+                        c += '<td class="Generation">' + b + '</td>'
+                    if u == 13:
+                        c += '<td class="Legendary">' + b + '</td>'
+                else:
+                    c += '<td>' + b + '</td>'
+                if u == 13:
+                    t = str(x[0:1])
+                    t = t.strip("['']")
+                    p += '<tr>' + '<td>'+'<img src= "pokemonimages/front/'+ t +'.png"'+ '</td>' + c + '</tr>'
+            layout = """<!DOCTYPE HTML>
+<html>
+  <head> <Title> Kanto Region Pokedex
+  </Title>
+  <link rel="stylesheet" href=Pokemon.css></head>
+  <body>
+      """ + CreateNavBar() + """
+    <h1> Kanto Region Pokedex </h1>
+      <h2> Richard Lin </h2>
+      <p> I changed up all of the color and combined columns Type 1 and Type 2 when there is not any type in column Type 2. I used the colors from <a href:"https://bulbapedia.bulbagarden.net/wiki/Category:Type_color_templates"> here </a> for the pokemon types. I added a black background to make the color, especially the bright ones, pop out more. I used white text because it looks nice and adds a sense of softness, in a way. I used red text because it comes out nice and bold against the black. </p> 
+    <table><tr><td class="Image">Image</td><td class="Number">#</td><td class="Name">Name</td><td class="Type1">Type 1</td><td class="Type2">Type 2</td><td class="Total">Total</td><td class="HP">HP</td><td class="Attack">Attack</td><td class="Defense">Defense</td><td class="SpAtk">Sp. Atk</td><td class="SpDef">Sp. Def</td><td class="Speed">Speed</td><td class="Generation">Generation</td><td class="Legendary">Legendary</td></tr> """ + p + """</table>
+  </body>
+</html>"""
+    return layout
+
+
+def makeTypePage(pokeType,css):
+    
+    with open('pokemon.csv','r') as text:
+        something = ''
+        something += text.read()
+        d = something.split('\n')
+        c = ''
+        g = ''
+        e = []
+        num = -1
+        part = ''
+        r=''
+        
+        
+        for x in d:
+            f = x.split(',')
+            p = ''
+            
+            num += 1
+            for l in f:
+                
+                if pokeType == l:
+                    c += str(num) + ','
+        c = c.strip(',')
+        c = c.split(',')
+        for k in c:
+            e += d[int(k):int(k)+1]
+        for h in e:
+            count = 0
+            h = h.split(',')
+            part = ''
+            for v in h:
+                count += 1
+                if count > 2:    
+                    if count == 3:
+                        g = v
+                    if count == 4:
+                        if v == "":
+                            part += '<td class="' + g +'" colspan="2">' + g + '</td>'
+                        else:
+                            part += '<td class="' + g +'">' + g + '</td>''<td class="' + v +'">' + v + '</td>'
+                    if count == 5:
+                        part += '<td class="Total">' + v + '</td>'  
+                    if count == 6:
+                        part += '<td class="HP">' + v + '</td>'
+                    if count == 7:
+                        part += '<td class="Attack">' + v + '</td>'
+                    if count == 8:
+                        part += '<td class="Defense">' + v + '</td>'
+                    if count == 9:
+                        part += '<td class="SpAtk">' + v + '</td>'
+                    if count == 10:
+                        part += '<td class="SpDef">' + v + '</td>'
+                    if count == 11:
+                        part += '<td class="Speed">' + v + '</td>'
+                    if count == 12:
+                        part += '<td class="Generation">' + v + '</td>'
+                    if count == 13:
+                        part += '<td class="Legendary">' + v + '</td>'
+                else:
+                    part += '<td>' + v + '</td>'
+                if count == 13:
+                    t = str(h[0:1])
+                    t = t.strip("['']")
+                    r += '<tr>' + '<td>'+'<img src= "pokemonimages/front/'+ t +'.png"'+ '</td>' + part + '</tr>'
+    
+    template = """<!DOCTYPE HTML>
+<html>
+  <head> <Title>""" + pokeType + """ Pokemon
+  </Title>
+  <link rel="stylesheet" href=""" + css + """></head>
+  <body>
+      """ + CreateNavBar() + """
+    <h1>""" + pokeType + """ Pokemon </h1>
+      <p>These are the """ + pokeType + """ Pokemon of the Kanto Region. </p>
+    <table><tr><td class="Image">Image</td><td class="Number">#</td><td class="Name">Name</td><td class="Type1">Type 1</td><td class="Type2">Type 2</td><td class="Total">Total</td><td class="HP">HP</td><td class="Attack">Attack</td><td class="Defense">Defense</td><td class="SpAtk">Sp. Atk</td><td class="SpDef">Sp. Def</td><td class="Speed">Speed</td><td class="Generation">Generation</td><td class="Legendary">Legendary</td></tr> """ + r + """</table>
+  </body>
+</html>"""
+    return template
+
+css=
+print (makeHomePage('Charizard','Arcanine','Gengar','Hitmonchan','Gyarados','Dragonite'))
+
+
