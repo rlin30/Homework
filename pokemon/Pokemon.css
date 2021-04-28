@@ -68,9 +68,35 @@ h2 {
           color: blue;
           font-size: 18px;
 }
+.Type 1 {
+          background-color:#BF1DA4;
+          color:#FFFFFF;
+}
+.Type 2 {
+          background-color:#1D35BF;
+          color:#FFFFFF;
+}
+.# {
+          background-color:#1D53BF;
+          color:#FFFFFF;
+}
+
+.Image {
+          background-color:#1CBFBA;
+          color:#FFFFFF;
+}
+
+.Name {
+          background-color:#BF1D69;
+          color:#FFFFFF;
+}
 
 .Total {
           background-color:#A46798;
+          color:#FFFFFF;
+}
+.HP {
+          background-color:#487E0E;
           color:#FFFFFF;
 }
 .Attack {
@@ -91,19 +117,19 @@ h2 {
 }
 .Speed {
           background-color:#C2D1EB;
-          color:#000000
+          color:#FFFFFF;
 }
 .Generation {
           background-color:#7CE552;
-          color:#000000;
+          color:#FFFFFF;
 }
 .Legendary {
           background-color:#FFFF00;
-          Color:#000000;
+          color:#FFFFFF;
 }
 .Bug {
           background-color:#A8B820;
-          color:#000000;
+          color:#FFFFFF;
 }
 .Electric {
           background-color:#F8D030;
@@ -111,7 +137,7 @@ h2 {
 }
 .Fairy {
           background-color:#EE99AC;
-          color:#000000;
+          color:#FFFFFF;
 }
 .Fire {
           background-color:#F08030;
