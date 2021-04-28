@@ -1,4 +1,4 @@
-
+<style>
           body {
                 text-align: center;
                 padding-left: 7%;
@@ -74,3 +74,6 @@
                 color: blue;
                 font-size: 18px;
                 }
+          .attack {background-color:red
+                }
+</style>
