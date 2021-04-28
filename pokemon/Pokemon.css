@@ -19,13 +19,14 @@ table {
 
 tr {
           border: solid black 5px;
-          border-bottom: none;
+          
 }
 
 td {
           border-right: solid 1px;
           padding: 5px;
           text-align: center;
+          
 }
 nav {
           padding-bottom: 10px;
