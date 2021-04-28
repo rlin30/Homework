@@ -51,11 +51,12 @@ a {
           padding-left: 3px;
           padding-right: 3px;
           text-align: center;
+          color:#FFFFFF
           
 }
 
 a:visited {
-          color:#d62828;
+          color:#FFFFFF;
 }
 h1 {
           font-family: Georgia;
