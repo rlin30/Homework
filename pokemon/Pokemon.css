@@ -69,11 +69,13 @@
                 font-family: Georgia;
                 color: lightblue;
                 font-size: 30px;
-                }
+            }
             h2 {font-family: Brush Script MT;
                 color: blue;
                 font-size: 18px;
-                }
+          }
           .Attack {background-color:red;
-                }
+          }
+          .Fire {background-color:F08030;
+          }
 
