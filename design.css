@@ -1,3 +1,17 @@
+#!/usr/bin/python
+print("Content-Type: text/html\n\n")
+body {
+          text-align: center;
+          padding-left: 7%;
+          padding-right: 7%;
+          padding-top: 3%;
+          padding-bottom: 3%;
+          font-family: American Typewriter, serif;
+          color:#d62828;
+}
+
+
+}
 nav {
           padding-bottom: 10px;
 }
@@ -34,3 +48,12 @@ a {
 
 a:visited {
           color:#FFFFFF;
+}
+
+}
+h3 {
+          font-family: Brush Script MT;
+          color:#2265EC;
+          font-size: 35px;
+}
+
